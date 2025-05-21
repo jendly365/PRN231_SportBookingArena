@@ -1,0 +1,144 @@
+﻿<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sportaly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <style>
+        .navbar {
+            background-color: grey;
+        }
+
+        .navbar-brand {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+            display: flex;
+            gap: 20px;
+        }
+
+            .navbar-nav a {
+                color: white;
+                font-size: 18px;
+                font-weight: 500;
+                transition: 0.3s;
+                padding: 10px 15px;
+            }
+
+                .navbar-nav a:hover {
+                    color: #ff545a;
+                }
+
+        #auth-container {
+            margin-left: auto;
+            font-size: 18px;
+        }
+
+        .auth-btn {
+            background: #ff545a;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+            .auth-btn i {
+                font-size: 18px;
+            }
+
+            .auth-btn:hover {
+                background: #e0434d;
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="margin-left: -30%;height: 100px;width: 160%;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Sport<span style="color: #ff545a;">aly</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
+                <i class="fa fa-bars" style="color: white;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="navbar-nav" style="color:white">
+                    <li><a href="/Home/Index">Trang Chủ</a></li>
+                    <li><a asp-controller="Court" asp-action="Index">Danh Sách Sân Bãi</a></li>
+                </ul>
+            </div>
+            <div id="auth-container" style="margin-right:17%;display:contents"></div>
+
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const authContainer = document.getElementById("auth-container");
+            const email = localStorage.getItem("email");
+            const userID = localStorage.getItem("userID");
+            const fullName = localStorage.getItem("fullName");
+            const roleId = localStorage.getItem("roleId");
+
+            // Ẩn "Trang Chủ" và "Danh Sách Sân Bãi" nếu roleId = 2
+            if (roleId === "2") {
+                // Ẩn Trang Chủ
+                const homeMenu = document.querySelector("a[href='/Home/Index']");
+                if (homeMenu) homeMenu.style.display = "none";
+
+                // Ẩn Danh Sách Sân Bãi (kiểm tra nội dung thẻ <a>)
+                document.querySelectorAll(".navbar-nav a").forEach(link => {
+                    if (link.innerText.trim() === "Danh Sách Sân Bãi") {
+                        link.style.display = "none";
+                    }
+                });
+            }
+
+            if (email) {
+                // Chỉ hiển thị "Sân Đã Đặt" nếu roleId khác 2
+                const bookingLink = roleId !== "2"
+                    ? `<a href="/Booking/ViewBookingCus?userId=${userID}" style="color: white; margin-right: 10%; font-size: 18px;">Sân Đã Đặt</a>`
+                    : "";
+
+                authContainer.innerHTML = `
+                        ${bookingLink}
+                        <span style="color: white; margin-right: 15px;">Xin Chào, <strong>${fullName}</strong></span>
+                        <button class="auth-btn" onclick="logout()">Đăng Xuất</button>
+                    `;
+            } else {
+                authContainer.innerHTML = `
+                        <button class="auth-btn" onclick="login()">Đăng Nhập</button>
+                    `;
+            }
+        });
+
+        function login() {
+            window.location.href = "/Auth/Login";
+        }
+
+        function logout() {
+            localStorage.removeItem("token");
+            localStorage.removeItem("roleId");
+            localStorage.removeItem("email");
+            localStorage.removeItem("userID");
+            window.location.href = "/Auth/Login";
+        }
+    </script>
+
+
+
+
+
+
+
+</body>

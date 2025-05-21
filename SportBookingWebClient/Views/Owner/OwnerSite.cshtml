@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner Dashboard</title>
+    <style>
+        .owner-actions {
+            padding: 70px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .owner-actions::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%233498db" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            opacity: 0.7;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .action-card {
+            width: 320px;
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .action-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .action-card .icon-container {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #3498db, #1abc9c);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .action-card .icon-container::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 70%);
+            top: 0;
+            left: -100%;
+            transition: all 0.6s;
+        }
+        
+        .action-card:hover .icon-container::after {
+            left: 100%;
+        }
+        
+        .action-card .icon-container i {
+            font-size: 60px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .action-card:hover .icon-container i {
+            transform: scale(1.2);
+        }
+        
+        .action-card .btn-container {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .action-card .btn-action {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+        }
+        
+        .action-card .btn-action:hover {
+            background-color: #2980b9;
+            box-shadow: 0 6px 12px rgba(41, 128, 185, 0.4);
+        }
+        
+        .action-card.orders .icon-container {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+        
+        .action-card.orders .btn-action {
+            background-color: #e74c3c;
+            box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+        }
+        
+        .action-card.orders .btn-action:hover {
+            background-color: #c0392b;
+            box-shadow: 0 6px 12px rgba(192, 57, 43, 0.4);
+        }
+        
+        .section-title {
+            margin-bottom: 50px;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: #7f8c8d;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 20px auto 0;
+            line-height: 1.6;
+        }
+        
+   
+    </style>
+</head>
+<body>
+    @Html.Partial("Header")
+    <section class="owner-actions">
+        <div class="container">
+            <div class="section-title">
+                <h2>Owner Page</h2>
+                <p>Quản lý sân thể thao và đơn đặt của bạn một cách dễ dàng và hiệu quả</p>
+            </div>
+            
+            <div class="action-buttons">
+                <div class="action-card">
+                    <div class="icon-container">
+                        <i class="fas fa-table-tennis"></i>
+                    </div>
+                    <div class="btn-container">
+                        <a id="courtListBtn" href="#">
+                            <button class="btn-action">Xem Danh Sách Sân</button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Đơn Hiện Tại -->
+                <div class="action-card orders">
+                    <div class="icon-container">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="btn-container">
+                        <a id="orderListBtn" href="#">
+                            <button class="btn-action">Xem Đơn Hiện Tại</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Add your scripts here -->
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const userID = localStorage.getItem("userID");
+        if (userID) {
+            document.getElementById("courtListBtn").href = `/Owner/CourtList?userId=${userID}`;
+            document.getElementById("orderListBtn").href = `/Owner/BookingList?userId=${userID}`;
+        } else {
+            alert("Không tìm thấy User ID, vui lòng đăng nhập lại!");
+        }
+    });
+
+</script>
+
+<script>
+    const userID = localStorage.getItem("userID");
+    console.log("UserID từ localStorage:", userID);
+</script>
+
+<!-- Danh Sách Sân -->
+

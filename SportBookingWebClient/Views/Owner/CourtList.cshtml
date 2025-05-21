@@ -1,0 +1,312 @@
+﻿@using SportBookingWebAPI.Dtos.Court
+@model List<ListFeatureCourtDTO>
+@Html.Partial("Header")
+
+<style>
+    .bg-primary {
+        color: #fff;
+        background-color: #ff545a;
+    }
+</style>
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h2 class="mb-0 font-weight-bold"><i class="fas fa-futbol mr-2"></i>Danh Sách Sân Bãi</h2>
+            <a href="/Owner/AddNewCourt" class="btn btn-light btn-lg">
+                <i class="fas fa-plus-circle mr-1"></i> Thêm Sân
+            </a>
+
+        </div>
+    
+        <div class="card-body">
+            @if (Model == null || !Model.Any())
+            {
+                <div class="alert alert-info text-center">
+                    <i class="fas fa-info-circle mr-2"></i> Không có sân nào được đăng ký.
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" class="text-center">#</th>
+                                <th scope="col">Tên Sân</th>
+                                <th scope="col">Địa Chỉ</th>
+                                <th scope="col" class="text-right">Giá Mỗi Giờ</th>
+                                <th scope="col" class="text-center">Hình Ảnh</th>
+                                <th scope="col" class="text-center">Giờ Hoạt Động</th>
+                                <th scope="col" class="text-center">Số Sân Phụ</th>
+                                <th scope="col" class="text-center">Thao Tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var court in Model)
+                            {
+                                <tr id="court-row-@court.CourtId">
+                                    <td class="text-center align-middle">@court.CourtId</td>
+                                    <td class="align-middle font-weight-bold" id="court-name-@court.CourtId">@court.CourtName</td>
+                                    <td class="align-middle" id="court-address-@court.CourtId">
+                                        <i class="fas fa-map-marker-alt text-danger mr-1"></i> @court.Address
+                                    </td>
+                                    <td class="text-right align-middle">
+                                        <span class="badge badge-success p-2" id="court-price-@court.CourtId">
+                                            @court.PricePerHour VNĐ
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <img src="@court.ImageUrl" alt="@court.CourtName" class="img-thumbnail"
+                                             style="width: 120px; height: 80px; object-fit: cover;" id="court-image-@court.CourtId" />
+                                    </td>
+                                    <td class="align-middle font-weight-bold" id="court-time-@court.CourtId">
+                                        @(string.Format("{0:hh\\:mm}", court.StartTime)) - @(string.Format("{0:hh\\:mm}", court.EndTime))
+                                    </td>
+                                    <td class="align-middle font-weight-bold" id="court-name-@court.CourtId">@court.Quantity</td>
+
+                                    <td class="text-center align-middle">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-warning" onclick="toggleEditForm(@court.CourtId)">
+                                                <i class="fas fa-edit"></i> Chỉnh sửa
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-info" onclick="toggleSubCourts(@court.CourtId)">
+                                                <i class="fas fa-list-alt"></i> Xem các sân phụ
+                                            </button>
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                                <tr id="subCourtRow-@court.CourtId" class="d-none">
+                                    <td colspan="7">
+                                        <div id="subCourtList-@court.CourtId" class="p-2 border rounded bg-light">
+                                            <!-- Danh sách sân phụ sẽ được load ở đây -->
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Form chỉnh sửa -->
+                                <tr id="edit-form-@court.CourtId" style="display: none;">
+                                    <td colspan="6">
+                                        <div class="card p-3">
+                                            <form id="editForm-@court.CourtId" enctype="multipart/form-data" onsubmit="submitEditForm(event, @court.CourtId)">
+                                                <input type="hidden" name="CourtId" value="@court.CourtId" />
+
+                                                <div class="form-group">
+                                                    <label>Tên Sân:</label>
+                                                    <input type="text" name="CourtName" class="form-control" value="@court.CourtName" />
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Địa Chỉ:</label>
+                                                    <input type="text" name="Address" class="form-control" value="@court.Address" />
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Giá Mỗi Giờ:</label>
+                                                    <input type="number" name="PricePerHour" class="form-control" value="@court.PricePerHour" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Giờ Bắt Đầu:</label>
+                                                    <input type="time" name="StartTime" class="form-control"
+                                                           value="@(court.StartTime.HasValue ? court.StartTime.Value.ToString("HH:mm") : "")" />
+
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Giờ Đóng Cửa:</label>
+                                                    <input type="time" name="EndTime" class="form-control"
+                                                           value="@(court.EndTime.HasValue ? court.EndTime.Value.ToString("HH:mm") : "")" />
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <label>Hình Ảnh:</label>
+                                                    <input type="file" name="ImageFile" class="form-control-file" accept="image/*" />
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Danh Mục:</label>
+                                                    <select name="CategoryId" class="form-control">
+                                                        @foreach (var category in ViewBag.Categories)
+                                                        {
+                                                            <option value="@category.CategoryId" selected="@(@category.CategoryId == court.CategoryId)">
+                                                                @category.CategoryName
+                                                            </option>
+                                                        }
+                                                    </select>
+                                                </div>
+
+                                                <button type="submit" class="btn btn-success">
+                                                    <i class="fas fa-save"></i> Lưu thay đổi
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" onclick="toggleEditForm(@court.CourtId)">
+                                                    <i class="fas fa-times"></i> Hủy
+                                                </button>
+
+                                                <div id="successMessage-@court.CourtId" class="alert alert-success mt-2" style="display: none;"></div>
+                                                <div id="errorMessage-@court.CourtId" class="alert alert-danger mt-2" style="display: none;"></div>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- Form thêm sân -->
+
+<!-- JavaScript -->
+
+<script>
+    function toggleEditForm(courtId) {
+        var form = document.getElementById("edit-form-" + courtId);
+        if (form.style.display === "none") {
+            form.style.display = "table-row";
+        } else {
+            form.style.display = "none";
+        }
+    }
+
+    function submitEditForm(event, courtId) {
+        event.preventDefault(); // Ngăn chặn reload trang
+
+        var form = document.getElementById("editForm-" + courtId);
+        var formData = new FormData(form);
+
+        fetch("/api/court/edit", {
+            method: "POST",
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // 1. Cập nhật UI trong bảng
+                    document.querySelector(`#court-name-${courtId}`).innerText = formData.get("CourtName");
+                    document.querySelector(`#court-address-${courtId}`).innerHTML =
+                        `<i class="fas fa-map-marker-alt text-danger mr-1"></i> ${formData.get("Address")}`;
+                    document.querySelector(`#court-price-${courtId}`).innerText = formData.get("PricePerHour") + " VNĐ";
+                    document.querySelector(`#court-time-${courtId}`).innerText =
+                        `${formData.get("StartTime")} - ${formData.get("EndTime")}`;
+
+                    // 2. Nếu có ảnh mới, cập nhật ảnh
+                    var imageInput = form.querySelector('input[name="ImageFile"]');
+                    if (imageInput.files.length > 0) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            document.querySelector(`#court-image-${courtId}`).src = e.target.result;
+                        };
+                        reader.readAsDataURL(imageInput.files[0]);
+                    }
+
+                    // 3. Hiển thị thông báo thành công
+                    document.getElementById(`successMessage-${courtId}`).innerText = data.message;
+                    document.getElementById(`successMessage-${courtId}`).style.display = "block";
+                    document.getElementById(`errorMessage-${courtId}`).style.display = "none";
+
+                    // 4. Đóng form chỉnh sửa
+                    toggleEditForm(courtId);
+                } else {
+                    document.getElementById(`errorMessage-${courtId}`).innerText = data.message;
+                    document.getElementById(`errorMessage-${courtId}`).style.display = "block";
+                    document.getElementById(`successMessage-${courtId}`).style.display = "none";
+                }
+            })
+            .catch(error => {
+                document.getElementById(`errorMessage-${courtId}`).innerText = "Lỗi kết nối!";
+                document.getElementById(`errorMessage-${courtId}`).style.display = "block";
+            });
+    }
+
+    function toggleSubCourts(courtId) {
+        let row = document.getElementById(`subCourtRow-${courtId}`);
+        let container = document.getElementById(`subCourtList-${courtId}`);
+
+        if (row.classList.contains("d-none")) {
+            fetch(`/api/Court/subcourts/${courtId}`)
+                .then(response => response.json())
+                .then(data => {
+                    let html = "";
+                    if (data.length > 0) {
+                        html += "<ul class='list-group'>";
+                        data.forEach(sc => {
+                            html += `
+                                    <li class='list-group-item'>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span id="subCourtName-${sc.subCourtId}"><b>${sc.subCourtName}</b>: ${sc.description}</span>
+                                            <button class="btn btn-sm btn-warning" onclick="editSubCourt(${sc.subCourtId}, '${sc.subCourtName}')">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </div>
+                                        <div id="editSubCourtForm-${sc.subCourtId}" class="mt-2 d-none">
+                                            <input type="text" id="editSubCourtName-${sc.subCourtId}" class="form-control mb-2" value="${sc.subCourtName}">
+                                            <button class="btn btn-sm btn-success" onclick="saveSubCourt(${sc.subCourtId})">
+                                                <i class="fas fa-save"></i> Lưu
+                                            </button>
+                                            <button class="btn btn-sm btn-secondary" onclick="cancelEditSubCourt(${sc.subCourtId})">
+                                                <i class="fas fa-times"></i> Hủy
+                                            </button>
+                                        </div>
+                                    </li>`;
+                        });
+                        html += "</ul>";
+                    } else {
+                        html = "<p class='text-muted'>Không có sân phụ nào.</p>";
+                    }
+
+                    container.innerHTML = html;
+                    row.classList.remove("d-none");
+                })
+                .catch(error => {
+                    console.error("Lỗi tải danh sách sân phụ:", error);
+                    container.innerHTML = "<p class='text-danger'>Không thể tải danh sách sân phụ.</p>";
+                    row.classList.remove("d-none");
+                });
+        } else {
+            row.classList.add("d-none");
+        }
+    }
+
+    function editSubCourt(subCourtId, currentName) {
+        document.getElementById(`subCourtName-${subCourtId}`).classList.add("d-none");
+        document.getElementById(`editSubCourtForm-${subCourtId}`).classList.remove("d-none");
+    }
+
+    function cancelEditSubCourt(subCourtId) {
+        document.getElementById(`subCourtName-${subCourtId}`).classList.remove("d-none");
+        document.getElementById(`editSubCourtForm-${subCourtId}`).classList.add("d-none");
+    }
+
+    function saveSubCourt(subCourtId) {
+        let newName = document.getElementById(`editSubCourtName-${subCourtId}`).value;
+
+        fetch(`/api/court/UpdateSubCourt`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ SubCourtId: subCourtId, SubCourtName: newName })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById(`subCourtName-${subCourtId}`).innerHTML = `<b>${newName}</b>`;
+                    cancelEditSubCourt(subCourtId);
+                } else {
+                    alert("Cập nhật thất bại!");
+                }
+            })
+            .catch(error => {
+                console.error("Lỗi khi cập nhật sân phụ:", error);
+                alert("Đã xảy ra lỗi!");
+            });
+    }
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Đảm bảo có FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

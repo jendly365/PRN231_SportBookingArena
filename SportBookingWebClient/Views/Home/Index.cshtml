@@ -1,0 +1,500 @@
+﻿@using BusinessObject.Models
+@using SportBookingWebAPI.Dtos.Court
+@model List<SportBookingWebAPI.Dtos.Court.ListFeatureCourtDTO>
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<!-- meta data -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<!--font-family-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+	<!-- title of site -->
+	<title>Directory Landing Page</title>
+
+	<!-- For favicon png -->
+	<link rel="shortcut icon" type="image/icon" href="~/assets/logo/favicon.png" />
+
+	<!--font-awesome.min.css-->
+	<link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+
+	<!--linear icon css-->
+	<link rel="stylesheet" href="~/assets/css/linearicons.css">
+
+	<!--animate.css-->
+	<link rel="stylesheet" href="~/assets/css/animate.css">
+
+	<!--flaticon.css-->
+	<link rel="stylesheet" href="~/assets/css/flaticon.css">
+	<!--slick.css-->
+	<link rel="stylesheet" href="~/assets/css/slick.css">
+	<link rel="stylesheet" href="~/assets/css/slick-theme.css">
+
+	<!--bootstrap.min.css-->
+	<link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+
+	<!-- bootsnav -->
+	<link rel="stylesheet" href="~/assets/css/bootsnav.css">
+
+	<!--style.css-->
+	<link rel="stylesheet" href="~/assets/css/style.css">
+
+	<!--responsive.css-->
+	<link rel="stylesheet" href="~/assets/css/responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		.navbar-header {
+			display: flex;
+			align-items: center;
+		}
+
+		.navbar-brand {
+			font-size: 24px; /* Điều chỉnh kích thước */
+			font-weight: bold;
+			text-transform: uppercase; /* Viết hoa chữ */
+			padding: 10px 15px;
+		}
+
+		.navbar-header,
+		.navbar-collapse {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+
+		/* Căn chỉnh menu về bên phải */
+		.navbar-nav {
+			margin-left: auto;
+			display: flex;
+			align-items: center;
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			padding: 15px 20px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.welcome-hero-form {
+			display: flex;
+			align-items: center; /* Canh giữa theo chiều dọc */
+			justify-content: space-between; /* Cách đều các phần tử */
+			gap: 10px; /* Khoảng cách giữa các phần tử */
+			width: 100%;
+		}
+
+		.welcome-hero-serch {
+			margin-top: 0; /* Xóa margin để nó cùng hàng */
+		}
+
+		.navbar-nav li {
+			display: block; /* Đảm bảo li hoạt động đúng */
+			width: auto; /* Để li có thể mở rộng theo nội dung */
+		}
+
+			.navbar-nav li a {
+				display: block; /* Giúp a chiếm hết phần li */
+				padding: 10px 15px; /* Giúp dễ click hơn */
+			}
+
+
+		#navbar-menu a {
+			color: white; /* Màu chữ mặc định */
+			text-decoration: none; /* Loại bỏ gạch chân */
+		}
+
+			#navbar-menu a:hover {
+				color: #ff545a; /* Màu khi hover */
+			}
+
+
+	</style>
+</head>
+
+<body>
+
+	@Html.Partial("Header")
+
+	<!--welcome-hero start -->
+	<section id="home" class="welcome-hero" style="margin-left: -30%;width: 160%;margin-top:1%">
+		<div class="container">
+			<div class="welcome-hero-txt">
+				<h2>Đặt Sân Nhanh Chóng - Uy Tín - Tiện Lợi <br>Kết Nối Đam Mê</h2>
+				<p>
+					Hệ thống đặt sân bãi thể thao tiện ích , nhanh chóng , tìm đối thủ 
+				</p>
+			</div>
+		</div>
+
+	</section><!--/.welcome-hero-->
+	<!--welcome-hero end -->
+	<!--list-topics start -->
+	<section id="list-topics" class="list-topics">
+		<div class="container">
+			<div class="list-topics-content">
+				<ul>
+					<li>
+						<div class="single-list-topics-content">
+							<div class="single-list-topics-icon">
+								<i class="fas fa-futbol fa-2x"></i>
+							</div>
+							<h2><a href="#">Số Sân Bãi Hiện Có</a></h2>
+							<p>50 Sân</p>
+						</div>
+					</li>
+					<li>
+						<div class="single-list-topics-content">
+							<div class="single-list-topics-icon">
+								<i class="fas fa-map-marked-alt fa-2x"></i>
+							</div>
+							<h2><a href="#">Có Mặt Tại </a></h2>
+							<p>3 Miền Tổ Quốc</p>
+						</div>
+					</li>
+					<li>
+						<div class="single-list-topics-content">
+							<div class="single-list-topics-icon">
+								<i class="fas fa-users fa-2x"></i>
+							</div>
+							<h2><a href="#">Số Người Đang Tìm Đối</a></h2>
+							<p>100 người</p>
+						</div>
+					</li>
+					<li>
+						<div class="single-list-topics-content">
+							<div class="single-list-topics-icon">
+								<i class="fas fa-th fa-2x"></i>
+							</div>
+							<h2><a href="#">Với Hơn</a></h2>
+							<p>500+ Sân nhỏ</p>
+						</div>
+					</li>
+					<li>
+						<div class="single-list-topics-content">
+							<div class="single-list-topics-icon">
+								<i class="fas fa-trophy fa-2x"></i>
+							</div>
+							<h2><a href="#">Đã có </a></h2>
+							<p>50 giải đấu được tổ chức</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div><!--/.container-->
+
+	</section><!--/.list-topics-->
+	<!--list-topics end-->
+	<!--works start -->
+	<section id="works" class="works">
+		<div class="container">
+			<div class="section-header">
+				<h2>Hệ Thống Đặt Sân Sportaly </h2>
+			</div><!--/.section-header-->
+			<div class="works-content">
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="single-how-works">
+							<div class="single-how-works-icon">
+								<i class="fas fa-bolt fa-2x"></i>
+							</div>
+							<h2><a href="#">Nhanh Chóng <span> ,Tiện Lợi</span>!</a></h2>
+							<p>
+								Đặt Sân Cực Kì Nhanh Chóng , Tiện Lợi Chỉ Với 1 Cú Click !
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-how-works">
+							<div class="single-how-works-icon">
+								<i class="fas fa-shield-alt fa-2x"></i>
+							</div>
+							<h2><a href="#">Uy Tín  <span>Làm Nên Thương Hiệu</span></a></h2>
+							<p>
+								Không Bao Giờ Có Tình Trạng Đặt Sân Xong Không Có Sân , Giá Cả Minh Bạch 
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-how-works">
+							<div class="single-how-works-icon">
+								<i class="fas fa-headset fa-2x"></i>
+							</div>
+							<h2><a href="#">Hỗ Trợ  <span> Nhiệt Tình</span> Tận Tụy</a></h2>
+							<p>
+								Luôn Hỗ Trợ Khách Hàng 1 Cách Tận Tình , Chu Đáo Nhất 
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.container-->
+
+	</section><!--/.works-->
+	<!--works end -->
+	<!--explore start -->
+	
+
+	<!--reviews end -->
+	<!-- statistics strat -->
+	<section id="statistics" class="statistics" style="margin-left:-30%;width:160%">
+		<div class="container">
+			<div class="statistics-counter">
+				<div class="col-md-3 col-sm-6">
+					<div class="single-ststistics-box">
+						<div class="statistics-content">
+							<div class="counter">90 </div> <span>K+</span>
+						</div><!--/.statistics-content-->
+						<h3>listings</h3>
+					</div><!--/.single-ststistics-box-->
+				</div><!--/.col-->
+				<div class="col-md-3 col-sm-6">
+					<div class="single-ststistics-box">
+						<div class="statistics-content">
+							<div class="counter">40</div> <span>k+</span>
+						</div><!--/.statistics-content-->
+						<h3>listing categories</h3>
+					</div><!--/.single-ststistics-box-->
+				</div><!--/.col-->
+				<div class="col-md-3 col-sm-6">
+					<div class="single-ststistics-box">
+						<div class="statistics-content">
+							<div class="counter">65</div> <span>k+</span>
+						</div><!--/.statistics-content-->
+						<h3>visitors</h3>
+					</div><!--/.single-ststistics-box-->
+				</div><!--/.col-->
+				<div class="col-md-3 col-sm-6">
+					<div class="single-ststistics-box">
+						<div class="statistics-content">
+							<div class="counter">50</div> <span>k+</span>
+						</div><!--/.statistics-content-->
+						<h3>happy clients</h3>
+					</div><!--/.single-ststistics-box-->
+				</div><!--/.col-->
+			</div><!--/.statistics-counter-->
+		</div><!--/.container-->
+
+	</section><!--/.counter-->
+	<section id="blog" class="blog">
+		<div class="container">
+			<div class="section-header">
+				<h2>Sân thể thao nổi bật</h2>
+			</div>
+			<div class="blog-content">
+				<div class="row">
+					@if (Model != null && Model.Any())
+					{
+						@foreach (var court in Model)
+						{
+							<div class="col-md-4 col-sm-6">
+								<div class="single-blog-item">
+									<div class="single-blog-item-img" style="height:270px">
+										<img src="@court.ImageUrl" alt="Sân thể thao" style="height:270px; width:100%">
+									</div>
+									<div class="single-blog-item-txt" style="height:269px">
+										<h2><a href="#">@court.CourtName</a></h2>
+										<h4>Vị trí: @court.Location</h4>
+										<h4>Giá /1h: @court.PricePerHour VND</h4>
+										<h4>Thể loại: @court.CategoryName</h4>
+										<a href="@Url.Action("CourtDetail", "Court", new { id = court.CourtId })"
+										   class="btn btn-primary w-100 fw-bold">
+											Xem chi tiết
+										</a>
+									</div>
+								</div>
+							</div>
+						}
+					}
+					else
+					{
+						<p class="text-center">Không có sân nổi bật nào!</p>
+					}
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- statistics end -->
+	<!--blog start -->
+	<section id="blog" class="blog">
+		<div class="container">
+			<div class="section-header">
+				<h2>Thông Tin Hữu Ích</h2>
+				<p>Luôn Cập Nhật Các Mẹo Hay Mỗi Ngày</p>
+			</div><!--/.section-header-->
+			<div class="blog-content">
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="single-blog-item">
+							<div class="single-blog-item-img" style="height:270px">
+								<img src="~/assets/images/blog/Chanthuong.png" alt="blog image" style="height:270px">
+							</div>
+							<div class="single-blog-item-txt" style="height:269px">
+								<h2><a href="https://acc.vn/cach-phong-tranh-chan-thuong-trong-the-duc-the-thao/">Mẹo Để Tránh Chấn Thương Khi Chơi Thể Thao ? Bạn Đã Biết Chưa</a></h2>
+								<h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+								<p>
+									Những mẹo khá hữu ích dành cho các tín đồ đam mê thể thao . Khi chơi thể thao , ai cũng sợ trấn thương phải không nào , vậy nên đây là những cách để chúng ta chống trấn thương 1 cách hiệu qủa..
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-blog-item">
+							<div class="single-blog-item-img" style="height:270px">
+								<img src="~/assets/images/blog/thucpham.png" alt="blog image" style="height:270px">
+							</div>
+							<div class="single-blog-item-txt" style="height:269px">
+								<h2><a href="https://suckhoedoisong.vn/thuc-pham-nen-an-va-nen-tranh-truoc-khi-tap-luyen-the-thao-169220520004640863.htm">Những Thực Phẩm Nên Bổ Sung Để Chơi Thể Thao Được Khỏe Hơn </a></h2>
+								<h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+								<p>
+									Thực phẩm cũng đóng một vai trò cực kì lớn trong việc duy trì thể chất khi chơi thể thao đó , một điều mà trước giờ mọi người đều ngó lơ ..
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="single-blog-item">
+							<div class="single-blog-item-img" style="height:270px">
+								<img src="~/assets/images/blog/lichthethao.png" alt="blog image" style="height:270px">
+							</div>
+							<div class="single-blog-item-txt" style="height:269px">
+								<h2><a href="https://www.vinmec.com/vie/bai-viet/cach-nao-thu-xep-thoi-gian-cho-hoat-dong-chat-khi-ban-ron-vi">Bạn Đã Biết Sắp Xếp Lịch Để Chơi Thể Thao Một Cách Hợp Lý Chưa ?</a></h2>
+								<h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+								<p>
+									Chơi thể thao cũng cần phải sắp xếp lịch sao cho thật hợp lý đó , bạn nên biết điều này .......
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.container-->
+
+	</section><!--/.blog-->
+	<!--blog end -->
+	<!--subscription strat -->
+	<section id="contact" class="subscription">
+		<div class="container">
+			<div class="subscribe-title text-center">
+				<h2>
+					Bạn Có Muốn Trở Thành Chủ Sân ? 
+				</h2>
+				
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="subscription-input-group">
+						<form action="#">
+							<input type="email" class="subscription-input-form" placeholder="Nhập Email Của Bạn ">
+							<button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
+								Tạo Tài Khoản Ngay
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section><!--/subscription-->
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="footer-menu">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="index.html">list<span>race</span></a>
+						</div><!--/.navbar-header-->
+					</div>
+					<div class="col-sm-9">
+						<ul class="footer-menu-item">
+							<li class="scroll"><a href="#works">how it works</a></li>
+							<li class="scroll"><a href="#explore">explore</a></li>
+							<li class="scroll"><a href="#reviews">review</a></li>
+							<li class="scroll"><a href="#blog">blog</a></li>
+							<li class="scroll"><a href="#contact">contact</a></li>
+							<li class=" scroll"><a href="#contact">my account</a></li>
+						</ul><!--/.nav -->
+					</div>
+				</div>
+			</div>
+			<div class="hm-footer-copyright">
+				<div class="row">
+					<div class="col-sm-5">
+						<p>
+							&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+						</p><!--/p-->
+					</div>
+					<div class="col-sm-7">
+						<div class="footer-social">
+							<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-linkedin"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+						</div>
+					</div>
+				</div>
+
+			</div><!--/.hm-footer-copyright-->
+		</div><!--/.container-->
+
+		<div id="scroll-Top">
+			<div class="return-to-top">
+				<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+			</div>
+
+		</div><!--/.scroll-Top-->
+
+
+	</footer><!--/.footer-->
+	<!--subscription end -->
+	
+	<!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+	<script src="~/assets/js/jquery.js"></script>
+
+	<!--modernizr.min.js-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+	<!--bootstrap.min.js-->
+	<script src="~/assets/js/bootstrap.min.js"></script>
+
+	<!-- bootsnav js -->
+	<script src="~/assets/js/bootsnav.js"></script>
+
+	<!--feather.min.js-->
+	<script src="~/assets/js/feather.min.js"></script>
+
+	<!-- counter js -->
+	<script src="~/assets/js/jquery.counterup.min.js"></script>
+	<script src="~/assets/js/waypoints.min.js"></script>
+
+	<!--slick.min.js-->
+	<script src="~/assets/js/slick.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+	<!--Custom JS-->
+	<script src="~/assets/js/custom.js"></script>
+	<script>
+
+	</script>
+
+</body>
+
+</html>
+
+

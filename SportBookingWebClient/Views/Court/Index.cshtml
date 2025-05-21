@@ -1,0 +1,460 @@
+﻿@using BusinessObject.Models
+@using SportBookingWebAPI.Dtos.Court
+@model PagedCourtResponse
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<!-- meta data -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<!--font-family-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+	<!-- title of site -->
+	<title>Directory Landing Page</title>
+
+	<!-- For favicon png -->
+	<link rel="shortcut icon" type="image/icon" href="~/assets/logo/favicon.png" />
+
+	<!--font-awesome.min.css-->
+	<link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+
+	<!--linear icon css-->
+	<link rel="stylesheet" href="~/assets/css/linearicons.css">
+
+	<!--animate.css-->
+	<link rel="stylesheet" href="~/assets/css/animate.css">
+
+	<!--flaticon.css-->
+	<link rel="stylesheet" href="~/assets/css/flaticon.css">
+
+	<!--slick.css-->
+	<link rel="stylesheet" href="~/assets/css/slick.css">
+	<link rel="stylesheet" href="~/assets/css/slick-theme.css">
+
+	<!--bootstrap.min.css-->
+	<link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+
+	<!-- bootsnav -->
+	<link rel="stylesheet" href="~/assets/css/bootsnav.css">
+
+	<!--style.css-->
+	<link rel="stylesheet" href="~/assets/css/style.css">
+
+	<!--responsive.css-->
+	<link rel="stylesheet" href="~/assets/css/responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		.navbar-header {
+			display: flex;
+			align-items: center;
+		}
+
+		.navbar-brand {
+			font-size: 24px; /* Điều chỉnh kích thước */
+			font-weight: bold;
+			text-transform: uppercase; /* Viết hoa chữ */
+			padding: 10px 15px;
+		}
+
+		.navbar-header,
+		.navbar-collapse {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+
+		/* Căn chỉnh menu về bên phải */
+		.navbar-nav {
+			margin-left: auto;
+			display: flex;
+			align-items: center;
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			padding: 15px 20px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.custom-checkbox {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			padding: 10px;
+			border-radius: 8px;
+			transition: all 0.3s ease;
+			cursor: pointer;
+			background-color: #f8f9fa;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+		}
+
+			.custom-checkbox:hover {
+				background-color: #ffe5e5;
+			}
+
+		.custom-checkbox-input {
+			display: none;
+		}
+
+		.custom-checkbox-label {
+			font-size: 16px;
+			font-weight: 500;
+			color: #333;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+		}
+
+			.custom-checkbox-label::before {
+				margin-right: 20px;
+				content: '\f00c';
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				width: 20px;
+				height: 20px;
+				border: 2px solid #ff545a;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 14px;
+				color: transparent;
+				transition: all 0.3s ease;
+			}
+
+		.custom-checkbox-input:checked + .custom-checkbox-label::before {
+			background-color: #ff545a;
+			color: white;
+		}
+
+		.card {
+			height: 100%; /* Đảm bảo các card có cùng chiều cao */
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.card-body {
+			flex-grow: 1; /* Giúp nội dung trong card mở rộng đồng đều */
+		}
+
+		.card-title {
+			min-height: 50px; /* Giữ chiều cao tiêu đề đồng nhất */
+		}
+
+		.card p {
+			white-space: nowrap; /* Tránh xuống dòng ngoài ý muốn */
+			overflow: hidden;
+			text-overflow: ellipsis; /* Cắt bớt chữ nếu quá dài */
+		}
+
+		.card img {
+			height: 220px; /* Giữ ảnh đồng nhất */
+			object-fit: cover; /* Ảnh không bị méo */
+		}
+
+		.card {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			border: 2px solid #ddd; /* Tăng độ rõ nét của viền */
+			border-radius: 10px; /* Bo tròn nhẹ */
+			overflow: hidden;
+			transition: 0.3s ease-in-out; /* Hiệu ứng hover */
+		}
+
+			.card:hover {
+				border-color: #ff545a; /* Khi hover, viền sẽ đổi màu */
+				transform: scale(1.03); /* Hiệu ứng phóng to nhẹ */
+			}
+
+		.card-body {
+			flex-grow: 1;
+		}
+
+		.card-title {
+			min-height: 50px;
+		}
+
+		.card p {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.card img {
+			height: 220px;
+			object-fit: cover;
+		}
+
+		.btn-primary {
+			background-color: #ff545a !important; /* Đổi màu nút */
+			border: none;
+			font-weight: bold;
+			transition: 0.3s;
+		}
+
+			.btn-primary:hover {
+				background-color: #e03e44 !important; /* Màu đậm hơn khi hover */
+			}
+
+	</style>
+</head>
+<body>
+	@Html.Partial("Header")
+
+	<section id="statistics" class="statistics" style="margin-left:-30%;width:160%;height:150px">
+		<div class="container">
+			<div class="statistics-counter">
+				<div class="col-md-3 col-sm-6">
+					<div class="single-ststistics-box">
+						<div class="statistics-content">
+							<div class="counter" style="font-size:45px;margin-right:-288%">Danh Sách Sân Bãi </div> 
+						</div><!--/.statistics-content-->
+					</div><!--/.single-ststistics-box-->
+				</div><!--/.col-->
+			</div><!--/.statistics-counter-->
+		</div><!--/.container-->
+
+	</section><!--/.counter-->
+	<div class="container" style="font-size:45px;">
+		<div class="row" style="margin-top:7%;">
+
+			<!-- Filter section (left side) -->
+			<div class="col-md-3" style="margin-left:-20%; border: 1px solid #ddd; border-radius: 8px; padding: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-top:-5%">
+				<h2 style="font-size: 20px; text-align: center; font-weight: bold; color: #ff545a; margin-bottom: 15px;">
+					<i class="fas fa-filter" style="margin-right: 8px;"></i>Lọc Sân
+				</h2>
+				<form method="get" id="filterForm" style="display: flex; flex-direction: column; gap: 12px;">
+					<!-- Thanh tìm kiếm -->
+					<div style="display: flex; align-items: center; gap: 10px; margin-bottom:3%">
+						<input type="text" id="searchQuery" name="searchQuery" placeholder="Tìm kiếm sân..."
+							   class="form-control" style="flex-grow: 1;" value="@ViewBag.SearchQuery">
+
+						<!-- Button tìm kiếm -->
+						<button type="submit" class="btn btn-primary" style="height: 35px; background-color:#ff545a">
+							<i class="fas fa-search"></i> Tìm
+						</button>
+					</div>
+
+					@{
+						var selectedCategoryIds = ViewBag.SelectedCategoryIds as List<int> ?? new List<int>();
+						var categories = ViewBag.Categories as List<Category> ?? new List<Category>();
+					}
+
+					<!-- Lọc theo loại sân -->
+					<div style="display: flex; flex-direction: column; gap: 12px; margin-top:-5%">
+						@foreach (var category in categories)
+						{
+							bool isChecked = selectedCategoryIds.Contains(category.CategoryId);
+							<div class="custom-checkbox">
+								<input id="category-@category.CategoryId"
+									   class="custom-checkbox-input"
+									   type="checkbox"
+									   name="selectedCategoryIds"
+									   value="@category.CategoryId"
+									   onchange="updateSelectedCategories()"
+								@(isChecked ? "checked" : "") />
+
+								<label for="category-@category.CategoryId" class="custom-checkbox-label">
+									@category.CategoryName
+								</label>
+							</div>
+						}
+					</div>
+
+					<!-- Input ẩn lưu danh sách category đã chọn -->
+					<input type="hidden" id="selectedCategoriesInput" name="categoryId" value="@string.Join(",", selectedCategoryIds)" />
+				</form>
+			</div>
+
+			<!-- Script -->
+			<script>
+				function updateSelectedCategories() {
+					let selectedCategories = [];
+					document.querySelectorAll("input[name='selectedCategoryIds']:checked").forEach((checkbox) => {
+						selectedCategories.push(checkbox.value);
+					});
+
+					// Cập nhật input ẩn với danh sách categoryId được chọn
+					document.getElementById("selectedCategoriesInput").value = selectedCategories.join(",");
+
+					// Gửi form
+					document.getElementById("filterForm").submit();
+				}
+			</script>
+
+
+
+
+			<!-- Products section (right side) -->
+			<div class="col-md-9" style="margin-left:20%; border: 1px solid #ddd; border-radius: 8px; padding: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);margin-top:-5%">
+				<h2 style="font-size: 25px; margin-left: 35%;">
+					Danh Sách Sân Bãi @* @Model.CategoryName
+				</h2>
+
+				<!-- Check if there are no courts -->
+			@* 	@if (Model.Courts.Count == 0)
+				{
+					<p>Không có sân bãi nào trong danh mục này.</p>
+				}
+				else
+				{ *@
+					<div class="blog-content" style="margin-left: -40%; width: 131%;">
+						<div class="row">
+							@if (Model.Courts != null && Model.Courts.Any())
+							{
+								@foreach (var court in Model.Courts)
+								{
+									<div class="col-md-4 col-sm-6 d-flex">
+										<div class="card shadow-sm border-0 mb-4" style="border-radius: 10px; overflow: hidden;">
+											<div class="card-img-top" style="height: 244px; overflow: hidden;">
+												<img src="@court.ImageUrl" alt="Sân thể thao"
+													 style="width: 100%; height: 300px; object-fit: cover;">
+											</div>
+											<div class="card-body">
+												<h5 class="card-title fw-bold" style="color: black !important;">@court.CourtName</h5>
+												<p class="card-text mb-2"><strong style="color:black">Vị trí:</strong> @court.Location</p>
+												<h4>
+													Giá /1h: <span>
+														@(Convert.ToDecimal(court.PricePerHour).ToString("N0")) VND
+													</span>
+												</h4>
+												<p class="card-text mb-3"><strong style="color:black">Thể loại:</strong> @court.CategoryName</p>
+												<a href="@Url.Action("CourtDetail", "Court", new { id = court.CourtId })"
+												   class="btn btn-primary w-100 fw-bold">
+													Xem chi tiết
+												</a>
+											</div>
+										</div>
+									</div>
+								}
+							}
+							else
+							{
+								<p class="text-center text-muted fw-bold">Không có sân nổi bật nào!</p>
+							}
+						</div>
+					</div>
+
+				
+			</div>
+		</div>
+	</div>
+
+
+@* 	<div class="pagination" style="margin-left:50%;">
+	 	@if (Model.TotalPages > 1)
+		{
+			<ul class="pagination">
+				@for (int i = 1; i <= Model.TotalPages; i++)
+				{
+					<li class="page-item @(i == Model.CurrentPage ? "active" : "")"
+						style="@(i == Model.CurrentPage ? "background-color:#ff545a;" : "")">
+						<a class="page-link" href="?pageNumber=@i&selectedCategoryIds=@string.Join(",", Request.Query["selectedCategoryIds"])"
+						   style="@(i == Model.CurrentPage ? "color: white;" : "")">
+							@i
+						</a>
+					</li>
+
+				}
+			</ul>
+		}
+	</div> *@
+	<div class="pagination-container d-flex justify-content-center mt-4">
+		<nav>
+			<ul class="pagination">
+				<!-- Nút Previous -->
+				<li class="page-item @(Model.PageNumber == 1 ? "disabled" : "")">
+					<a class="page-link" href="@Url.Action("Index", new { pageNumber = Model.PageNumber - 1, pageSize = 6,searchQuery = ViewBag.SearchQuery, selectedCategoryIds = ViewBag.SelectedCategoryIds  })">
+						&laquo; Trước
+					</a>
+				</li>
+
+				<!-- Các số trang -->
+				@for (int i = 1; i <= Model.TotalPages; i++)
+				{
+					<li class="page-item @(i == Model.PageNumber ? "active" : "")">
+						<a class="page-link" href="@Url.Action("Index", new { pageNumber = i, pageSize = 6,searchQuery = ViewBag.SearchQuery, selectedCategoryIds = ViewBag.SelectedCategoryIds  })">
+							@i
+						</a>
+					</li>
+				}
+
+				<!-- Nút Next -->
+				<li class="page-item @(Model.PageNumber == Model.TotalPages ? "disabled" : "")">
+					<a class="page-link" href="@Url.Action("Index", new { pageNumber = Model.PageNumber + 1, pageSize = 6,searchQuery = ViewBag.SearchQuery, selectedCategoryIds = ViewBag.SelectedCategoryIds  })">
+						Sau &raquo;
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="footer-menu">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="index.html">list<span>race</span></a>
+						</div><!--/.navbar-header-->
+					</div>
+					<div class="col-sm-9">
+						<ul class="footer-menu-item">
+							<li class="scroll"><a href="#works">how it works</a></li>
+							<li class="scroll"><a href="#explore">explore</a></li>
+							<li class="scroll"><a href="#reviews">review</a></li>
+							<li class="scroll"><a href="#blog">blog</a></li>
+							<li class="scroll"><a href="#contact">contact</a></li>
+							<li class=" scroll"><a href="#contact">my account</a></li>
+						</ul><!--/.nav -->
+					</div>
+				</div>
+			</div>
+			<div class="hm-footer-copyright">
+				<div class="row">
+					<div class="col-sm-5">
+						<p>
+							&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+						</p><!--/p-->
+					</div>
+					<div class="col-sm-7">
+						<div class="footer-social">
+							<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-linkedin"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+						</div>
+					</div>
+				</div>
+
+			</div><!--/.hm-footer-copyright-->
+		</div><!--/.container-->
+
+		<div id="scroll-Top">
+			<div class="return-to-top">
+				<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+			</div>
+
+		</div><!--/.scroll-Top-->
+
+	</footer><!--/.footer-->
+
+</body>

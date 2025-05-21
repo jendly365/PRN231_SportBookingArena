@@ -1,0 +1,673 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SportBookingWebClient.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SportBookingWebClient.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\assets\\css\\ajax-loader.gif"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\animate.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\bootsnav.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootsnav.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\flaticon.css",
+      "PackagePath": "staticwebassets\\assets\\css\\flaticon.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\slick.eot"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\slick.svg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\slick.woff"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\linearicons.css",
+      "PackagePath": "staticwebassets\\assets\\css\\linearicons.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\assets\\css\\responsive.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\slick-theme.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slick-theme.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slick.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\25487f3e-5b13-4412-a2bf-cec367be8918.png",
+      "PackagePath": "staticwebassets\\assets\\explore\\25487f3e-5b13-4412-a2bf-cec367be8918.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\2e916bed-b56a-454d-93c0-4dc362cc5a57.png",
+      "PackagePath": "staticwebassets\\assets\\explore\\2e916bed-b56a-454d-93c0-4dc362cc5a57.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\37bd618a-e628-4dbf-9e79-0db7b7500b31.jpg",
+      "PackagePath": "staticwebassets\\assets\\explore\\37bd618a-e628-4dbf-9e79-0db7b7500b31.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\3c4d261d-d57e-4342-afb2-786467c66899.jpg",
+      "PackagePath": "staticwebassets\\assets\\explore\\3c4d261d-d57e-4342-afb2-786467c66899.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\4ab42d94-88ed-4edf-a6c0-7d8306581250.jpg",
+      "PackagePath": "staticwebassets\\assets\\explore\\4ab42d94-88ed-4edf-a6c0-7d8306581250.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\71c8e0cf-a557-4550-a500-368910c3d101.webp",
+      "PackagePath": "staticwebassets\\assets\\explore\\71c8e0cf-a557-4550-a500-368910c3d101.webp"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\7a13a365-4a68-484a-b2b7-cd75f4d2962b.jpg",
+      "PackagePath": "staticwebassets\\assets\\explore\\7a13a365-4a68-484a-b2b7-cd75f4d2962b.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\94462a6b-12f2-4d88-8060-acf15c9da64a.png",
+      "PackagePath": "staticwebassets\\assets\\explore\\94462a6b-12f2-4d88-8060-acf15c9da64a.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\9948ea59-8c88-4bf4-bda2-61922c789491.jpg",
+      "PackagePath": "staticwebassets\\assets\\explore\\9948ea59-8c88-4bf4-bda2-61922c789491.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\a97800c2-d651-4249-b76a-06d36397e802.jpg",
+      "PackagePath": "staticwebassets\\assets\\explore\\a97800c2-d651-4249-b76a-06d36397e802.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\e8788dd6-935c-4927-baec-853f4eef9d91.jpg",
+      "PackagePath": "staticwebassets\\assets\\explore\\e8788dd6-935c-4927-baec-853f4eef9d91.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\explore\\f72ea2b3-0f74-4a02-9a30-7c2053c06d86.jpg",
+      "PackagePath": "staticwebassets\\assets\\explore\\f72ea2b3-0f74-4a02-9a30-7c2053c06d86.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\Linearicons-Free.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Linearicons-Free.eot"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\Linearicons-Free.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Linearicons-Free.svg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\Linearicons-Free.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Linearicons-Free.ttf"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\Linearicons-Free.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Linearicons-Free.woff"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\Linearicons-Free.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Linearicons-Free.woff2"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\fonts\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\0076LBVZly1hbs728z6o4j31hc0u048g.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\0076LBVZly1hbs728z6o4j31hc0u048g.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\0076LBVZly1hbs76he60cj31hc0u012c.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\0076LBVZly1hbs76he60cj31hc0u012c.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\2222.png",
+      "PackagePath": "staticwebassets\\assets\\images\\2222.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\Qr\\QrUID2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Qr\\QrUID2.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\Qr\\c1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Qr\\c1.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\Qr\\c2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Qr\\c2.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\Qr\\c3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Qr\\c3.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\Qr\\c4.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Qr\\c4.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\blog\\Chanthuong.png",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\Chanthuong.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\blog\\b1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\b1.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\blog\\b2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\b2.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\blog\\b3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\b3.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\blog\\lichthethao.png",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\lichthethao.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\blog\\thucpham.png",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\thucpham.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\counter\\counter-banner.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\counter\\counter-banner.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\Sanbongda1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\Sanbongda1.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\Sanbongda2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\Sanbongda2.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\Sanbongda3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\Sanbongda3.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\Sanbongda4.png",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\Sanbongda4.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\Sanbongda5.png",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\Sanbongda5.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\cristiano.png",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\cristiano.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\e1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\e1.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\e2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\e2.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\e3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\e3.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\e4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\e4.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\e5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\e5.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\e6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\e6.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\explore\\person.png",
+      "PackagePath": "staticwebassets\\assets\\images\\explore\\person.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\images\\welcome-hero\\SportBanner.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\welcome-hero\\SportBanner.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\img\\controls.png",
+      "PackagePath": "staticwebassets\\assets\\img\\controls.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\js\\bootsnav.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootsnav.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\js\\custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\js\\feather.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\feather.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\js\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slick.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\js\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\waypoints.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\assets\\logo\\favicon.png",
+      "PackagePath": "staticwebassets\\assets\\logo\\favicon.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\vendor\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\vendor\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\vendor\\jquery\\jquery.min.map",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\vendor\\jquery\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\vendor\\jquery\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.min.js"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\vendor\\jquery\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.min.map"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebClient\\wwwroot\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.SportBookingWebClient.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.SportBookingWebClient.props",
+      "PackagePath": "build\\SportBookingWebClient.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.SportBookingWebClient.props",
+      "PackagePath": "buildMultiTargeting\\SportBookingWebClient.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.SportBookingWebClient.props",
+      "PackagePath": "buildTransitive\\SportBookingWebClient.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

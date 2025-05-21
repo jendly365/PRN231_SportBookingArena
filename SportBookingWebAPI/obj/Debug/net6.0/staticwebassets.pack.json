@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebAPI\\wwwroot\\assets\\explore\\02890373-1d74-4126-b29c-f74b10f7ecce.png",
+      "PackagePath": "staticwebassets\\assets\\explore\\02890373-1d74-4126-b29c-f74b10f7ecce.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebAPI\\wwwroot\\assets\\explore\\abee4014-af8c-405d-a24e-031bff4380ae.jpg",
+      "PackagePath": "staticwebassets\\assets\\explore\\abee4014-af8c-405d-a24e-031bff4380ae.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebAPI\\wwwroot\\assets\\explore\\b9813b84-d5ed-41f9-b3e9-397d6ec301f2.png",
+      "PackagePath": "staticwebassets\\assets\\explore\\b9813b84-d5ed-41f9-b3e9-397d6ec301f2.png"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebAPI\\wwwroot\\assets\\images\\0076LBVZly1hbs728z6o4j31hc0u048g.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\0076LBVZly1hbs728z6o4j31hc0u048g.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebAPI\\wwwroot\\assets\\images\\0076LBVZly1hbs76he60cj31hc0u012c.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\0076LBVZly1hbs76he60cj31hc0u012c.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebAPI\\wwwroot\\assets\\images\\51982375-73e0-4b60-8741-cdfab7c684d0_0076LBVZly1hbs76he60cj31hc0u012c.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\51982375-73e0-4b60-8741-cdfab7c684d0_0076LBVZly1hbs76he60cj31hc0u012c.jpg"
+    },
+    {
+      "Id": "E:\\FU_Learning\\Dai_Hoc_FPT\\Spring2025_Ki8\\PRN231\\Code_Tren_Lop\\PRN231_FinalProject_SportBooking\\SportBookingWebAPI\\wwwroot\\assets\\images\\a80da14a-31a8-41ed-a631-da8c7435bf9d_0076LBVZly1hbs76he60cj31hc0u012c.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\a80da14a-31a8-41ed-a631-da8c7435bf9d_0076LBVZly1hbs76he60cj31hc0u012c.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.SportBookingWebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.SportBookingWebAPI.props",
+      "PackagePath": "build\\SportBookingWebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.SportBookingWebAPI.props",
+      "PackagePath": "buildMultiTargeting\\SportBookingWebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.SportBookingWebAPI.props",
+      "PackagePath": "buildTransitive\\SportBookingWebAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

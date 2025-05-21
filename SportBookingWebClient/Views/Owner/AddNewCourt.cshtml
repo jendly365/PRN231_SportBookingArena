@@ -1,0 +1,83 @@
+﻿@using BusinessObject.Models
+@{
+    ViewData["Title"] = "Thêm Sân Mới";
+}
+
+@Html.Partial("Header")
+
+<h2>Thêm Sân Mới</h2>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">@ViewBag.Message</div>  <!-- Thông báo thành công -->
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>  <!-- Thông báo lỗi -->
+}
+
+<form method="post" enctype="multipart/form-data" asp-action="AddNewCourt">
+    <div class="form-group">
+        <label>Tên Sân</label>
+        <input type="text" name="CourtName" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Địa chỉ</label>
+        <input type="text" name="Address" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Giá mỗi giờ</label>
+        <input type="number" name="PricePerHour" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Thời gian bắt đầu</label>
+        <input type="time" name="StartTime" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Thời gian kết thúc</label>
+        <input type="time" name="EndTime" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label>Danh Mục:</label>
+        <select name="CategoryId" class="form-control">
+            @foreach (var category in ViewBag.Categories)
+            {
+                <option value="@category.CategoryId">
+                    @category.CategoryName
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Chọn ảnh</label>
+        <input type="file" name="ImageFile" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Xác nhận</button>
+</form>
+<script>
+    // Gọi API để lấy tất cả các danh mục
+    fetch('https://localhost:7071/api/Category')
+        .then(response => response.json())
+        .then(categories => {
+            console.log(categories);  // Kiểm tra dữ liệu trả về
+            var categoryDropdown = document.getElementById('categoryDropdown');
+            categories.forEach(category => {
+                var option = document.createElement('option');
+                option.value = category.id;  // Thay `id` bằng thuộc tính tương ứng trong dữ liệu API
+                option.textContent = category.name;  // Thay `name` bằng thuộc tính tương ứng trong dữ liệu API
+                categoryDropdown.appendChild(option);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching categories:', error);
+        });
+
+</script>

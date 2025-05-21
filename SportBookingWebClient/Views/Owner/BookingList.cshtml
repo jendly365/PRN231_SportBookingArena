@@ -1,0 +1,156 @@
+﻿@using SportBookingWebAPI.Dtos
+@model List<BookingDetails>
+@{
+    ViewData["Title"] = "Danh sách Booking";
+}
+@Html.Partial("Header")
+
+<div class="container-fluid mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0"><i class="fas fa-calendar-check mr-2"></i>@ViewData["Title"]</h2>
+        </div>
+        <div class="card-body">
+            @if (Model != null && Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th class="text-center">#</th>
+                                <th><i class="fas fa-user mr-1"></i>Tên khách hàng</th>
+                                <th><i class="fas fa-map mr-1"></i>Sân chính</th>
+                                <th><i class="fas fa-futbol mr-1"></i>Sân phụ</th>
+                                <th class="text-center"><i class="fas fa-clock mr-1"></i>Ngày Đặt</th>
+                                <th class="text-center"><i class="fas fa-clock mr-1"></i>Giờ bắt đầu</th>
+                                <th class="text-center"><i class="fas fa-clock mr-1"></i>Giờ kết thúc</th>
+                                <th class="text-center"><i class="fas fa-hourglass-half mr-1"></i>Tổng giờ</th>
+                                <th class="text-right"><i class="fas fa-money-bill-wave mr-1"></i>Tổng tiền</th>
+                                <th class="text-center"><i class="fas fa-info-circle mr-1"></i>Trạng thái</th>
+                                <th class="text-center"><i class="fas fa-cogs mr-1"></i>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var booking in Model)
+                            {
+                                <tr>
+                                    <td class="text-center font-weight-bold">@booking.BookingID</td>
+                                    <td>@booking.CustomerName</td>
+                                    <td>@booking.MainCourtName</td>
+                                    <td>@booking.SubCourtName</td>
+                                    <td>@booking.BookingDate</td>
+                                    <td class="text-center">@booking.StartTime</td>
+                                    <td class="text-center">@booking.EndTime</td>
+                                    <td class="text-center">
+                                        <span class="badge badge-dark p-2" style="color:black">@booking.TotalHours giờ</span> 
+                                    </td>
+                                    <td class="text-right font-weight-bold text-success">
+                                        @booking.TotalAmount.ToString("N0") VND
+                                    </td>
+                                    <td class="text-center">
+                                        @if (booking.BookingStatus == "Pending")
+                                        {
+                                            <span class="badge badge-warning p-2" style="color:black">Chờ xác nhận</span>
+                                        }
+                                        else if (booking.BookingStatus == "Confirmed")
+                                        {
+                                            <span class="badge badge-success p-2 text-white">Đã xác nhận</span>
+                                        }
+                                        else if (booking.BookingStatus == "Cancelled")
+                                        {
+                                            <span class="badge badge-danger p-2 text-white">Đã hủy</span>
+                                        }
+                                        else if (booking.BookingStatus == "Completed")
+                                        {
+                                            <span class="badge badge-primary p-2">Hoàn thành</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-secondary p-2">@booking.BookingStatus</span>
+                                        }
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="btn-group">
+                                           
+                                            @if (booking.BookingStatus == "Pending")
+                                            {
+                                                <button class="btn btn-danger" data-booking-id="@booking.BookingID" style="background-color:red">Xác Nhận</button>
+
+                                            }
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info text-center">
+                    <i class="fas fa-info-circle fa-2x mb-3"></i>
+                    <p class="mb-0">Không có booking nào cho chủ sân này.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $('.btn-danger').on('click', function () {
+        var bookingId = $(this).data('booking-id');
+        console.log("Booking ID: " + bookingId); // Kiểm tra giá trị của bookingId
+
+        var confirmationMessage = "Bạn có thực sự muốn xác nhận? \n\n" 
+           
+        var userConfirmed = confirm(confirmationMessage);
+
+        if (userConfirmed) {
+            $.ajax({
+                url: '/api/booking/confirmed', // URL API
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ bookingId: bookingId }), // Gửi bookingId
+                success: function (response) {
+                    alert('Xác Nhận Thành Công! ');
+                    location.reload();
+                },
+                error: function (xhr, status, error) {
+                    alert('Có lỗi xảy ra. Vui lòng thử lại.');
+                    console.log(xhr.responseText);  // Xem lỗi chi tiết trong console
+                }
+            });
+        }
+    });
+</script>
+<!-- Đảm bảo có FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Thêm style tùy chỉnh -->
+<style>
+    .table th {
+        font-weight: bold;
+        vertical-align: middle;
+    }
+
+    .table td {
+        vertical-align: middle;
+    }
+
+    .badge {
+        font-size: 90%;
+    }
+
+    .badge-success {
+        color: #00b300 !important;
+        background-color: #e6ffe6 !important;
+        border: 1px solid #00b300;
+    }
+
+    .badge-danger {
+        color: #ff0000 !important;
+        background-color: #ffebeb !important;
+        border: 1px solid #ff0000;
+    }
+</style>

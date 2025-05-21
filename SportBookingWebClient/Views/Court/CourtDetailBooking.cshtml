@@ -1,0 +1,412 @@
+﻿@using BusinessObject.Models
+@using SportBookingWebAPI.Dtos.Court
+@model SportBookingWebAPI.Dtos.Court.CourtDetailDTO
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lịch Đặt Sân</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        h4 {
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+            min-width: 120px;
+            white-space: nowrap;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        .booked {
+            color: red;
+            font-weight: bold;
+        }
+
+        .available {
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    @{
+        var slots = Enumerable.Range(0, 15)
+        .Select(i => new
+        {
+            SlotNumber = i + 1,
+            Start = TimeSpan.FromHours(7 + i),
+            End = TimeSpan.FromHours(8 + i)
+        }).ToArray();
+
+        var queryDate = Context.Request.Query["date"].ToString();
+        DateTime today;
+        if (!string.IsNullOrEmpty(queryDate) && DateTime.TryParse(queryDate, out var parsedDate))
+        {
+            today = parsedDate.Date;
+        }
+        else
+        {
+            today = DateTime.Today;
+        }
+    }
+
+    @Html.Partial("Header")
+    <div class="d-flex justify-content-end mb-3">
+        <label for="date-picker" class="me-2 fw-bold">Chọn ngày:</label>
+        <input type="date" id="date-picker" class="form-control" style="width: 200px;" value="@today.ToString("yyyy-MM-dd")" />
+    </div>
+
+    <div class="container">
+        <h4 class="text-center">Lịch Đặt Sân - @today.ToString("dd/MM/yyyy")</h4>
+        <div class="table-container">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sân</th>
+                        @foreach (var slot in slots)
+                        {
+                            <th style="color:black">
+                                Slot @slot.SlotNumber<br />
+                                (@slot.Start - @slot.End)
+                            </th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.SubCourts != null && Model.SubCourts.Any())
+                    {
+                        @foreach (var subCourt in Model.SubCourts)
+                        {
+                            <tr>
+                                <td>@subCourt.SubCourtName</td>
+                                @foreach (var slot in slots)
+                                {
+                                    var slotStart = today.Add(slot.Start);
+                                    var slotEnd = today.Add(slot.End);
+
+                                    var isBooked = Model.Bookings?.Any(b =>
+                                    b.SubCourtId == subCourt.SubCourtId &&
+                                    b.StartTime.HasValue && b.EndTime.HasValue &&
+                                    b.StartTime.Value == slotStart && b.EndTime.Value == slotEnd
+                                    ) ?? false;
+
+                                    <td class="@(isBooked ? "booked" : "available")">
+                                        @if (isBooked)
+                                        {
+                                            <span>Đã được đặt</span>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-success btn-sm add-btn"
+                                                    data-subcourt-id="@subCourt.SubCourtId"
+                                                    data-subcourt="@subCourt.SubCourtName"
+                                                    data-court="@subCourt.CourtName"
+                                                    data-address="@subCourt.Address"
+                                                    data-slot="@slot.SlotNumber"
+                                                    data-time="@($"{slot.Start:hh\\:mm} - {slot.End:hh\\:mm}")"
+                                                    data-price="@Model.PricePerHour"
+                                                    data-date="@today.ToString("yyyy-MM-dd")"
+                                                    onclick="setTimeSlot(this)">
+                                                +
+                                            </button>
+
+                                        }
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="9" class="text-center">Không có sân nào khả dụng</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <ul class="list-group" id="booking-info" style="display:none;">
+        <li class="list-group-item"><strong>Sân:</strong> <span id="court-name"></span></li>
+        <li class="list-group-item"><strong>Tên Sân:</strong> <span id="court-name2"></span></li>
+        <li class="list-group-item"><strong>Ngày:</strong> <span id="booking-date"></span></li>
+        <li class="list-group-item"><strong>Khung giờ:</strong> <span id="time-slot"></span></li>
+        <li class="list-group-item"><strong>Giá:</strong> <span id="price"></span></li>
+        <li class="list-group-item"><strong>Địa Chỉ:</strong> <span id="address"></span></li>
+        <li class="list-group-item"><strong>SubCourtID:</strong> <span id="subcourt-id"></span></li> <!-- Thêm dòng này -->
+    </ul>
+        <button class="btn btn-primary" onclick="showPaymentInfo()">Thanh toán</button>
+    <!-- Modal Thanh Toán -->
+    <div id="paymentSection" class="card mt-4" style="display: none;">
+        <div class="card-body">
+            <h5 class="card-title">Hóa Đơn Thanh Toán</h5>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Sân:</strong> <span id="modal-court-name"></span></li>
+                <li class="list-group-item"><strong>UserID:</strong> <span id="user-id"></span></li>
+                <li class="list-group-item"><strong>Tên Sân:</strong> <span id="modal-court-name2"></span></li>
+                <li class="list-group-item"><strong>Ngày:</strong> <span id="modal-booking-date"></span></li>
+                <li class="list-group-item"><strong>Khung giờ:</strong> <span id="modal-time-slot"></span></li>
+                <input type="time" id="start-time" hidden />
+
+                <input type="time" id="end-time" hidden />
+                <li class="list-group-item"><strong>Giá:</strong> <span id="modal-price"></span></li>
+                <li class="list-group-item"><strong>Địa Chỉ:</strong> <span id="modal-address"></span></li>
+                <li class="list-group-item"><strong>Chủ sân:</strong> @Model.Owner.FullName</li>
+                <li class="list-group-item"><strong>SĐT:</strong> @Model.Owner.Phone</li>
+                <li class="list-group-item">
+                    <strong>QR Thanh toán:</strong><br />
+                    <img src="~/assets/images/Qr/@Model.Owner.Qr" alt="QR Code" width="200" />
+                </li>
+                <li class="list-group-item">
+                    <strong>Ảnh chuyển khoản:</strong><br />
+                    <input type="file" class="form-control mt-2" id="paymentProof" accept="image/*" />
+                </li>
+                <li class="list-group-item">
+                    <strong>Mô tả:</strong><br />
+                    <textarea class="form-control mt-2" id="description" rows="3"></textarea>
+                </li>
+            </ul>
+
+            <!-- Lưu ý về chính sách hủy sân -->
+            <h4 style="color:red;font-style:italic;font-weight:bold">Xin Lưu Ý : </h4>
+            <p class="mt-3 text-danger fst-italic">
+                Hủy sân trước <strong>12 tiếng</strong> hoàn <strong>100%</strong> tiền. <br>
+                Hủy sân trước <strong>6 tiếng</strong> hoàn <strong>50%</strong> tiền. <br>
+                Hủy sân trước <strong>2 tiếng</strong> không hoàn tiền.
+            </p>
+
+            <div class="mt-3 text-end">
+                <button class="btn btn-success" onclick="completePayment()">Hoàn tất thanh toán</button>
+            </div>
+        </div>
+    </div>
+
+    @functions {
+        private string GetSlotClass(string slotStatus)
+        {
+            if (slotStatus == "Booked")
+            {
+                return "booked";
+            }
+            else if (slotStatus == "Available")
+            {
+                return "available";
+            }
+            return string.Empty;
+        }
+    }
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.add-btn');
+        const bookingInfo = document.getElementById('booking-info');
+        const courtName = document.getElementById('court-name');     // SubCourtName
+        const courtName2 = document.getElementById('court-name2');   // CourtName
+        const address = document.getElementById('address');           // Address
+        const timeSlot = document.getElementById('time-slot');
+        const price = document.getElementById('price');
+        const bookingDate = document.getElementById('booking-date');
+        const subCourtId = document.getElementById('subcourt-id');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const name = button.getAttribute('data-subcourt');  // SubCourtName
+                const name2 = button.getAttribute('data-court');     // CourtName
+                const addr = button.getAttribute('data-address');    // Address
+                const time = button.getAttribute('data-time');
+                const priceValue = button.getAttribute('data-price');
+                const dateValue = button.getAttribute('data-date');
+                const subCourtIDValue = button.getAttribute('data-subcourt-id');
+
+                courtName.innerText = name;
+                courtName2.innerText = name2;
+                address.innerText = addr;
+                timeSlot.innerText = time;
+                price.innerText = priceValue + " VND";
+                bookingDate.innerText = new Date(dateValue).toLocaleDateString('vi-VN');
+                subCourtId.innerText = subCourtIDValue;
+
+                // Lưu subCourtId vào biến toàn cục để sử dụng sau này
+                window.subCourtId = subCourtIDValue;
+
+                bookingInfo.style.display = 'block';
+                bookingInfo.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    });
+
+    document.getElementById('date-picker').addEventListener('change', function () {
+        const selectedDate = this.value;
+        const currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.set('date', selectedDate);
+        window.location.href = currentUrl.toString();
+    });
+
+    function showPaymentInfo() {
+        // Hiện phần hóa đơn thanh toán
+        document.getElementById("paymentSection").style.display = "block";
+
+        // Lấy dữ liệu đã hiển thị ở phần booking-info
+        const courtNameValue = document.getElementById("court-name").innerText;
+        const courtNameValue2 = document.getElementById("court-name2").innerText;
+        const addressValue = document.getElementById("address").innerText;
+        const bookingDateValue = document.getElementById("booking-date").innerText;
+        const timeSlotValue = document.getElementById("time-slot").innerText;
+        const priceValue = document.getElementById("price").innerText;
+
+        // Gán vào modal
+        document.getElementById("modal-court-name").innerText = courtNameValue;
+        document.getElementById("modal-court-name2").innerText = courtNameValue2;
+        document.getElementById("modal-address").innerText = addressValue;
+        document.getElementById("modal-booking-date").innerText = bookingDateValue;
+        document.getElementById("modal-time-slot").innerText = timeSlotValue;
+        document.getElementById("modal-price").innerText = priceValue;
+
+        const userId = localStorage.getItem("userID");
+        document.getElementById("user-id").innerText = userId;
+    }
+
+    function setTimeSlot(button) {
+        // Lấy giá trị thời gian từ data-time
+        var timeSlot = button.getAttribute('data-time'); // Ví dụ: "07:00 - 08:00"
+
+        // Cắt chuỗi thành hai phần bắt đầu và kết thúc
+        var times = timeSlot.split(' - ');
+        var startTime = times[0]; // "07:00"
+        var endTime = times[1]; // "08:00"
+
+        // Gán giá trị vào các input
+        document.getElementById("start-time").value = startTime;
+        document.getElementById("end-time").value = endTime;
+
+        // Lưu subCourtId vào biến toàn cục để sử dụng sau này
+        window.subCourtId = button.getAttribute("data-subcourt-id");
+    }
+
+    function completePayment() {
+        var startTimeElement = document.getElementById("start-time");
+        var endTimeElement = document.getElementById("end-time");
+
+        // Kiểm tra sự tồn tại của các phần tử trước khi lấy giá trị
+        if (!startTimeElement || !endTimeElement) {
+            alert("Không tìm thấy phần tử thời gian bắt đầu hoặc kết thúc.");
+            return;
+        }
+
+        var startTime = startTimeElement.value;
+        var endTime = endTimeElement.value;
+
+        // Lấy ngày người dùng chọn từ input date-picker
+        var selectedDate = document.getElementById('date-picker').value;
+
+        // Tạo đối tượng Date từ chuỗi ngày
+        var currentDate = new Date(selectedDate);
+
+        // Lấy ngày hiện tại (yyyy-MM-dd) từ đối tượng Date
+        var currentDateString = currentDate.toISOString().split('T')[0]; // Lấy ngày (yyyy-MM-dd)
+
+        // Kết hợp ngày người dùng chọn với thời gian bắt đầu và kết thúc
+        var startDate = new Date(currentDateString + " " + startTime);
+        var endDate = new Date(currentDateString + " " + endTime);
+
+        // Kiểm tra giá trị thời gian có hợp lệ không
+        if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+            alert("Giá trị thời gian không hợp lệ");
+            return;
+        }
+
+        // Định dạng lại thời gian theo kiểu yyyy-MM-dd HH:mm:ss.000
+        function formatDateTime(date) {
+            var year = date.getFullYear();
+            var month = String(date.getMonth() + 1).padStart(2, '0');
+            var day = String(date.getDate()).padStart(2, '0');
+            var hours = String(date.getHours()).padStart(2, '0');
+            var minutes = String(date.getMinutes()).padStart(2, '0');
+            var seconds = String(date.getSeconds()).padStart(2, '0');
+            var milliseconds = String(date.getMilliseconds()).padStart(3, '0');
+
+            return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}.${milliseconds}`;
+        }
+
+        var formattedStartTime = formatDateTime(startDate);
+        var formattedEndTime = formatDateTime(endDate);
+        const userId = localStorage.getItem("userID");
+
+        // In ra các dữ liệu trước khi gửi lên server
+        console.log("UserId:", userId);
+        console.log("SubCourtId:", subCourtId);
+        console.log("Description:", document.getElementById("description").value);
+        console.log("StartTime:", formattedStartTime);
+        console.log("EndTime:", formattedEndTime);
+        console.log("CheckoutImg:", document.getElementById("paymentProof").files[0]);
+
+        var formData = new FormData();
+        formData.append("UserId", userId);
+        formData.append("SubCourtId", subCourtId);
+        formData.append("Description", document.getElementById("description").value);
+        formData.append("StartTime", formattedStartTime); // Sử dụng thời gian đã được định dạng
+        formData.append("EndTime", formattedEndTime);   // Sử dụng thời gian đã được định dạng
+        formData.append("CheckoutImg", document.getElementById("paymentProof").files[0]);
+
+        // Gửi dữ liệu lên server
+        fetch("/api/court/bookings", {
+            method: "POST",
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert("Booking đã được tạo thành công!");
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error("Lỗi khi tạo booking:", error);
+                if (error.response) {
+                    console.log("Response error:", error.response);
+                }
+                alert("Đã có lỗi xảy ra, vui lòng thử lại!");
+            });
+
+    }
+
+</script>
+
+
+
+
+
+

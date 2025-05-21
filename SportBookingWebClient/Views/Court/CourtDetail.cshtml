@@ -1,0 +1,373 @@
+﻿@using BusinessObject.Models
+@using SportBookingWebAPI.Dtos.Court
+@model SportBookingWebAPI.Dtos.Court.CourtDetailDTO
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<!--font-family-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+	<!-- title of site -->
+	<title>Directory Landing Page</title>
+
+	<!-- For favicon png -->
+	<link rel="shortcut icon" type="image/icon" href="~/assets/logo/favicon.png" />
+
+	<!--font-awesome.min.css-->
+	<link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+
+	<!--linear icon css-->
+	<link rel="stylesheet" href="~/assets/css/linearicons.css">
+
+	<!--animate.css-->
+	<link rel="stylesheet" href="~/assets/css/animate.css">
+
+	<!--flaticon.css-->
+	<link rel="stylesheet" href="~/assets/css/flaticon.css">
+
+	<!--slick.css-->
+	<link rel="stylesheet" href="~/assets/css/slick.css">
+	<link rel="stylesheet" href="~/assets/css/slick-theme.css">
+
+	<!--bootstrap.min.css-->
+	<link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+
+	<!-- bootsnav -->
+	<link rel="stylesheet" href="~/assets/css/bootsnav.css">
+
+	<!--style.css-->
+	<link rel="stylesheet" href="~/assets/css/style.css">
+
+	<!--responsive.css-->
+	<link rel="stylesheet" href="~/assets/css/responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<style>
+		.navbar-header {
+			display: flex;
+			align-items: center;
+		}
+
+		.navbar-brand {
+			font-size: 24px; /* Điều chỉnh kích thước */
+			font-weight: bold;
+			text-transform: uppercase; /* Viết hoa chữ */
+			padding: 10px 15px;
+		}
+
+		.navbar-header,
+		.navbar-collapse {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+
+		/* Căn chỉnh menu về bên phải */
+		.navbar-nav {
+			margin-left: auto;
+			display: flex;
+			align-items: center;
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			padding: 15px 20px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.welcome-hero-form {
+			display: flex;
+			align-items: center; /* Canh giữa theo chiều dọc */
+			justify-content: space-between; /* Cách đều các phần tử */
+			gap: 10px; /* Khoảng cách giữa các phần tử */
+			width: 100%;
+		}
+
+		.welcome-hero-serch {
+			margin-top: 0; /* Xóa margin để nó cùng hàng */
+		}
+
+	</style>
+</head>
+
+<body>
+	@Html.Partial("Header")
+
+	<section id="statistics" class="statistics" style="margin-left:-30%;width:160%">
+		<div class="container">
+			<h2 style="color: #ff545a; text-align: center; font-size: 32px; font-weight: bold; margin-top: 20px;">
+				Thông Tin Sân
+			</h2>
+		</div><!--/.container-->
+	</section><!--/.counter-->
+
+	<div class="container-xxl py-5">
+		<div class="container">
+			<div class="row g-5">
+				<!-- Thông tin Court -->
+				<div class="col-lg-8" style="margin-left:-20%;margin-bottom:10%">
+					<div class="card border-0 shadow-lg p-4" style="height: 120%;width: 130%;">
+						<div class="row g-4">
+							<!-- Hình ảnh sân -->
+							<div class="col-lg-6">
+								<div class="position-relative wow fadeIn" data-wow-delay="0.1s">
+									<img class="img-fluid rounded" src="@Model.ImageUrl"
+										 style="width: 100%; height: 400px; object-fit: cover;"
+										 >
+								</div>
+							</div>
+
+							<!-- Thông tin sân -->
+							<div class="col-lg-6">
+								<h6 class="text-uppercase fw-bold text-danger">// Thông Tin Sân //</h6>
+								<h1 class="mb-3 fw-bold text-primary">@Model.CourtName</h1>
+								<p class="mb-4 text-secondary" style="font-size: 18px;">@Model.CourtDescription</p>
+
+								<!-- Chủ sân -->
+								<div class="col-12">
+									<div class="d-flex align-items-center">
+										<div class="icon-box bg-light d-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+											<i class="fas fa-user text-danger"></i>
+										</div>
+										<div class="ps-3">
+											<h5 class="mb-0">Chủ sân</h5>
+											<p class="text-muted mb-0">@Model.FullName</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- Giờ mở cửa - đóng cửa -->
+								<div class="col-12">
+									<div class="d-flex align-items-center">
+										<div class="icon-box bg-light d-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+											<i class="fas fa-clock text-danger"></i>
+										</div>
+										<div class="ps-3">
+											<h5 class="mb-0">Giờ hoạt động</h5>
+											<p class="text-muted mb-0">
+												@(Model.StartTime?.ToString("HH:mm") ?? "N/A") - @(Model.EndTime?.ToString("HH:mm") ?? "N/A")
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- Chi tiết sân -->
+								<div class="row g-3">
+									<div class="col-md-6">
+										<div class="d-flex align-items-center gap-3">
+											<div class="icon-box bg-light d-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+												<i class="fas fa-dollar-sign text-danger"></i>
+											</div>
+											<div>
+												<h5 class="mb-1">Giá thuê</h5>
+												<p class="text-muted mb-0">@Model.PricePerHour VND / giờ</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="d-flex align-items-center gap-3">
+											<div class="icon-box bg-light d-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+												<i class="fas fa-map-marker-alt text-danger"></i>
+											</div>
+											<div>
+												<h5 class="mb-1">Địa chỉ</h5>
+												<p class="text-muted mb-0">@Model.Address</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-6">
+										<div class="d-flex align-items-center gap-3">
+											<div class="icon-box bg-light d-flex align-items-center justify-content-center rounded-circle" style="width: 50px; height: 50px;">
+												<i class="fas fa-list-alt text-danger"></i>
+											</div>
+											<div>
+												<h5 class="mb-1">Loại sân</h5>
+												<p class="text-muted mb-0">@Model.CategoryName</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Nút đặt sân -->
+								<div class="mt-4">
+									<a href="@Url.Action("CourtDetailBooking", "Court", new { id = @Model.CourtID })" class="btn btn-danger btn-lg py-3 px-5">
+										Đặt Sân Ngay <i class="fa fa-arrow-right ms-3"></i>
+									</a>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Danh sách sân phụ -->
+				<div class="col-lg-4" style="margin-left: 20%; margin-bottom: 10%;">
+					<div class="card border-0 shadow-lg p-4" style="height: 120%;">
+						<h4 class="fw-bold text-center text-primary mb-4">Danh sách sân phụ</h4>
+						<div class="row g-3">
+							@if (Model.SubCourts != null && Model.SubCourts.Any())
+							{
+								@foreach (var subCourt in Model.SubCourts)
+								{
+									<div class="col-12">
+										<div class="card border-0 shadow-sm p-3">
+											<h5 class="text-danger fw-bold">@subCourt.SubCourtName</h5>
+											<p class="text-muted mb-1">@subCourt.SubCourtName</p>
+										</div>
+									</div>
+								}
+							}
+							else
+							{
+								<div class="col-12 text-center">
+									<i class="fas fa-times-circle text-danger fa-3x"></i>
+									<p class="text-muted mt-2">Hiện chưa có sân phụ</p>
+								</div>
+							}
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<h1 style="font-weight: bolder;font-size: 30px;margin-left: 35%;">
+					Đánh Giá
+				</h1>
+
+				<!-- Reviews -->
+				<div class="card border-0 shadow-lg p-4 mt-4" style="margin-left: -10%;">
+					<h4 class="text-primary fw-bold">Đánh giá từ người dùng</h4>
+					<div class="mt-3">
+						@if (Model.Reviews != null && Model.Reviews.Any())
+						{
+							foreach (var review in Model.Reviews)
+							{
+								<div class="border-bottom py-3">
+									<div class="d-flex align-items-center">
+										<div class="icon-box bg-light d-flex align-items-center justify-content-center rounded-circle"
+											 style="width: 50px; height: 50px;">
+											<i class="fas fa-user text-danger"></i>
+										</div>
+										<div class="ps-3">
+											<h5 class="mb-1">@review.FullName</h5>
+											<small class="text-muted">@review.ReviewDate</small>
+										</div>
+									</div>
+									<div class="mt-2">
+										<p class="mb-1">@review.Comment</p>
+									</div>
+								</div>
+							}
+						}
+						else
+						{
+							<div class="text-center py-4">
+								<i class="fas fa-comment-slash text-muted fa-3x"></i>
+								<p class="text-muted mt-2">Hiện chưa có đánh giá nào</p>
+							</div>
+						}
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="footer-menu">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="index.html">list<span>race</span></a>
+						</div><!--/.navbar-header-->
+					</div>
+					<div class="col-sm-9">
+						<ul class="footer-menu-item">
+							<li class="scroll"><a href="#works">how it works</a></li>
+							<li class="scroll"><a href="#explore">explore</a></li>
+							<li class="scroll"><a href="#reviews">review</a></li>
+							<li class="scroll"><a href="#blog">blog</a></li>
+							<li class="scroll"><a href="#contact">contact</a></li>
+							<li class=" scroll"><a href="#contact">my account</a></li>
+						</ul><!--/.nav -->
+					</div>
+				</div>
+			</div>
+			<div class="hm-footer-copyright">
+				<div class="row">
+					<div class="col-sm-5">
+						<p>
+							&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+						</p><!--/p-->
+					</div>
+					<div class="col-sm-7">
+						<div class="footer-social">
+							<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-linkedin"></i></a>
+							<a href="#"><i class="fa fa-google-plus"></i></a>
+						</div>
+					</div>
+				</div>
+
+			</div><!--/.hm-footer-copyright-->
+		</div><!--/.container-->
+
+		<div id="scroll-Top">
+			<div class="return-to-top">
+				<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+			</div>
+
+		</div><!--/.scroll-Top-->
+
+	</footer><!--/.footer-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			var id = 1008; // ID cần lấy
+			var apiUrl = `https://localhost:7071/api/Court/${id}`;
+
+			$.ajax({
+				url: apiUrl,
+				type: "GET",
+				dataType: "json",
+				success: function (data) {
+					console.log("✅ API Response:", data);
+					console.log(data);
+					renderSubCourts(data);
+				},
+				error: function (xhr, status, error) {
+					console.error("❌ Lỗi gọi API:", status, error);
+				}
+			});
+		});
+
+		// Hàm hiển thị danh sách sân con
+		function renderSubCourts(subCourts) {
+			var html = "";
+			if (subCourts.length === 0) {
+				html = "<p>Không có sân con nào.</p>";
+			} else {
+				subCourts.forEach(function (court) {
+					html += `<p>ID: ${court.id} - Tên: ${court.name}</p>`;
+				});
+			}
+			$("#subCourtList").html(html);
+		}
+
+	</script>
+</body>
